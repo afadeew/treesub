@@ -1,4 +1,4 @@
-# treesub: annotating ancestral substitutions on a tree
+# treesub: annotating ancestral substitutions on a tree (Fork from https://github.com/tamuri/treesub)
 
 ![](https://raw.github.com/tamuri/treesub/master/docs/annotator_fig1.png)
 
@@ -16,12 +16,20 @@ This little tool glues together several other tools to allow a user to input a c
 
 
 ## Installation
-This application have been confirmed to work on Mac OS 10.6+ and Linux. You need to download and install:
+This application have been confirmed to work on Linux or WSL (Windows Subsystem for Linux) with XOrg graphics server installed. You need to download and install:
 
-1. RAxML, which can be downloaded from [Alexis Stamatakis' lab homepage](http://sco.h-its.org/exelixis/software.html).
-2. PAML, which can be downloaded from [Ziheng Yang's homepage](http://abacus.gene.ucl.ac.uk/software/paml.html).
+1. RAxML (raxmlHPC executable), which can be downloaded and compiled from [Alexis Stamatakis' GitHub Repository](https://github.com/stamatak/standard-RAxML).
+2. PAML (baseml executable), which can be downloaded and compiled from [Ziheng Yang's GitHub Repository](https://github.com/abacus-gene/paml).
 3. A recent Java runtime (1.6+).
-4. Figtree, which can be downloaded from [Andrew Rambaut's homepage](http://tree.bio.ed.ac.uk/software/figtree/). The output of the treesub program is designed to work with Figtree but other tools _might_ work as well.
+4. Figtree, which can be downloaded from [Andrew Rambaut's GitHub Repository](https://github.com/rambaut/figtree/releases). The output of the treesub program is designed to work with Figtree but other tools _might_ work as well.
+5. Inkscape or other vector graphics editor.
+
+To compile Treesub you need ant (Java automatic builder) installed.
+
+To install Treesub:
+* clone the repository,
+* cd to repository folder
+* type "ant"
 
 ## Guide
 
