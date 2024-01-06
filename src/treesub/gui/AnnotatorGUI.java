@@ -421,7 +421,7 @@ public class AnnotatorGUI {
                 } else {
 
                     // Assume linux!
-                    raxmlOptions.add(0, " ");
+                    //raxmlOptions.add(0, "/usr/bin/unbuffer");
                     raxmlProcess = getProcessBuilder(raxmlOptions.toArray(new String[raxmlOptions.size()])).start();
 
                 }
@@ -458,7 +458,8 @@ public class AnnotatorGUI {
                 } else if (System.getProperty("os.name").equals("Mac OS X")) {
                     pamlProcess = getProcessBuilder("/usr/bin/script", "-q", "/dev/null", pamlPath.getText()).start();
                 } else {
-                    pamlProcess = getProcessBuilder(" ", pamlPath.getText()).start();
+                    //pamlProcess = getProcessBuilder("/usr/bin/unbuffer", pamlPath.getText()).start();
+					pamlProcess = getProcessBuilder(pamlPath.getText()).start();
                 }
 
                 publishInputStream(pamlProcess.getInputStream());
